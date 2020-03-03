@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script type="text/javascript">
+ 
+ var firstNum,secondNum;
+ var operation;
+
+alert("Hello Welcome to simple Calclulator. Please click Ok button");
+start();
+
+if (operation == 1){
+	Add( firstNum ,  secondNum)
+}
+
+else if (operation == 2){
+	Subtract( firstNum ,  secondNum)
+}
+
+else if (operation == 3){
+	Multiply( firstNum ,  secondNum)
+}
+else if (operation == 4){
+    Divide( firstNum ,  secondNum) 
+}
+
+else {
+
+	  alert("Enter number between 1 - 4 only");
+	  start();
+}
+
+
+function start()
+{
+ 
+ firstNum = prompt("Enter first number");
+ secondNum = prompt("Enter second number");
+ operation = prompt("Choose any number for operation"+"\n"+"1.Add" +"\n"+ "2.Subtract" +"\n"+"3.Multiply"+"\n"+"4.Divide" ); 
+
+
+}
+
+
+function Add( firstNum ,  secondNum) {
+  var result = Number(firstNum) + Number(secondNum);
+  alert(firstNum + " + " + secondNum +" The total is " + result);
+}
+
+function Subtract( firstNum ,  secondNum) {
+
+	var first = firstNum;
+	var second = secondNum;
+
+	if(second > first)
+	{
+		var result =  Number(secondNum) -  Number(firstNum) ;
+        alert(  secondNum  + " - " +  firstNum  + " The total is " + result);
+
+
+	}
+	else{
+		var result = Number(firstNum) - Number(secondNum);
+        alert( firstNum + " - " + secondNum + " The total is " + result);
+	}
+        
+}
+
+
+function Multiply( firstNum ,  secondNum) {
+  var result = Number(firstNum) * Number(secondNum);
+  alert( firstNum + " * " + secondNum +" The total is " + result);
+}
+
+function Divide( firstNum ,  secondNum) {
+  var result = Number(firstNum) / Number(secondNum);
+  var fix = result.toFixed(2);
+  alert( firstNum + " / " + secondNum +" The total is " + fix);
+}
+
+
+
+
+
+
+</script>
+
+</head>
+
+
+</html>
